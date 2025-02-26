@@ -7,24 +7,24 @@ function Header({ title }) {
 }
  
 function App() {
-  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton33'];
  
- // const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = useState(0);
  
   function handleClick() {
-    //setLikes(likes + 1);
+    setLikes(likes + 1);
   }
  
   return (
     <div>
-      <Header title="Develop. Preview. Ship. test22" />
+      <Header title="Develop. Preview. Ship. test33" />
       <ul>
         {names.map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
  
-      <button onClick={handleClick}>Like </button>
+      <button onClick={handleClick}>Like ({likes})</button>
     </div>
   );
 }
